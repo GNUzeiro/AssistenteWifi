@@ -1,0 +1,5 @@
+PING duckduckgo.com (23.21.193.169) 56(84) bytes of data.
+
+--- duckduckgo.com ping statistics ---
+31 packets transmitted, 0 received, 100% packet loss, time 441ms
+
