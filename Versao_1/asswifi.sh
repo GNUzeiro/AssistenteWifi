@@ -5,17 +5,34 @@ if [ $1 = "-h" ]; then
 	echo "######################################"
 	echo "#_Joni_Softwares________________2019_#"
 	echo "#====================================#"
-	echo "#         ASS_WIFI VERSAO 2.0        #"
+	echo "# ASS_WIFI VERSAO 2.0                #"
 	echo "#====================================#"
-	echo "#   Modo de usar:                    #"
-	echo "# $ sudo ./wifi placa                                   #"
-	echo "#                                    #"
-	echo "#====================================#"
-	echo "#   PRESSIONE <ENTER> PARA COMEÇAR   #"
-	echo "#                                    #"
-	echo "######################################"
+	echo ""
+	echo "[SINOPSE]"
+	echo "  sudo ./wifi.sh [MODO] [ARGUMENTO]"
+	echo "[DESCRIÇÃO]"
+	echo "[MODOS]"
+	echo "  -d, --direto: modo direto, faz a conexão direto sem mostrar menu algum"
+	echo "  -s, --set-all: modo de setar, define os valores que serão definidos como padrão"
+	echo "  -D, --default: conecta direto na rede definida como padrão"
+	echo ""
+	echo "[ARGUMENTOS]"
+	echo "  -d: wifi.sh -d [PLACA] [REDE]"
+	echo "  -s: wifi.sh -s [PLACA] [REDE]"
+	echo "  -D: wifi.sh -D"
 elif [ $1 = "-d" ]; then
-	echo "ola mundo"
+	PLACA=$2
+	REDE=$3
+	SENHA=$4
+	if [ $SENHA = null ]; then
+		sleep 1
+		echo "[*] Conectando a rede $REDE"
+		sleep 1
+		echo "[-] Senha: "
+		read SENHA
+	else
+		
+	fi
 elif [ $1 = "--set" ]; then
 	sleep 1
 	clear
